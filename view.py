@@ -3,3 +3,6 @@ def view_data(data, title):
 
 def get_value():
     return int(input('value = '))
+
+def get_opert():
+    return str(input('oper = '))
