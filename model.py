@@ -30,16 +30,16 @@ def init(in_a, in_b, type_num):
     model_ioc.get(model_name_int)(in_a, in_b)
             
 def mult():
-    return model_ioc.get(model_name_mlt)   # указать функцию
+    return model_ioc.get(model_name_mlt)()   # указать функцию
 
 def sum():
-    return model_ioc.get(model_name_sum)   # указать функцию
+    return model_ioc.get(model_name_sum)()   # указать функцию
 
 def div():
-    return model_ioc.get(model_name_div)   # указать функцию
+    return model_ioc.get(model_name_div)()   # указать функцию
 
 def sub():
-    return model_ioc.get(model_name_sub)   # указать функцию
+    return model_ioc.get(model_name_sub)()   # указать функцию
 
 
 
