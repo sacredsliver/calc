@@ -1,3 +1,12 @@
+x = str()
+y = str()
+
+def init(a, b):
+    global x
+    global y
+    x = a
+    y = b
+
 def parse(data):
 
     data = data.replace(" ", "")
@@ -7,34 +16,37 @@ def parse(data):
         elif x == "i":
             data_complex = data[len(data_real)+1:len(data)-1]
     return float(data_real), float(data_complex)
-            
-def mult(data1, data2):
-    list1 = parse(data1)
-    list2 = parse(data2)
 
-    real =  list1[0] * list2[0] - list1[1] * list2[1] 
-    complex =  list1[0] * list2[1] + list2[0] * list1[1]
+def sum():
+    list1 = parse(x)
+    list2 = parse(y)
 
-    return f'{real} + {complex} * i'
-
-def sum(data1, data2):
-    list1 = parse(data1)
-    list2 = parse(data2)
     real =  list1[0] +  list2[0]
     complex =  list1[1] + list2[1]
     return f'{real} + {complex} * i'
    
-def sub(data1, data2):
-    list1 = parse(data1)
-    list2 = parse(data2)
+def sub():
+    list1 = parse(x)
+    list2 = parse(y)
+
     real =  list1[0] -  list2[0]
     complex =  list1[1] - list2[1]
     return f'{real} + {complex} * i'
 
-def div(data1, data2):
-    list1 = parse(data1)
-    list2 = parse(data2)
+def div():
+    list1 = parse(x)
+    list2 = parse(y)
+
     real =  list1[0] +  list2[0]
     complex =  list1[1] + list2[1]
+    return f'{real} + {complex} * i'
+
+def mult():
+    list1 = parse(x)
+    list2 = parse(y)
+
+    real =  list1[0] * list2[0] - list1[1] * list2[1] 
+    complex =  list1[0] * list2[1] + list2[0] * list1[1]
+
     return f'{real} + {complex} * i'
 
